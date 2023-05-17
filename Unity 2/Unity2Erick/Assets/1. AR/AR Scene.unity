@@ -859,7 +859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sofa
+  m_text: Chair
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1697,9 +1697,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 990678543}
-  sofaPrefab: {fileID: 4416806050104632178, guid: 2da9020003dc34144a377fe9cc403c11, type: 3}
-  chairPrefabs: {fileID: 601653575732945281, guid: 716db6a242540e645baf077c2907377d, type: 3}
-  tablePrefab: {fileID: 1952480891304898446, guid: 9ca3b71e15d421f4cbf4f0efc7e7e679, type: 3}
+  furniturePrefabs:
+  - {fileID: 68193045690405339, guid: 3083017f4fc1f4f95a3b2bb80eabe71b, type: 3}
+  - {fileID: 100002, guid: 02e5269d0ab9fe64ca9bdff1d9cf8101, type: 3}
+  - {fileID: 5925373890534095276, guid: ebfedbd5958bee14092128f8fe8aeaa7, type: 3}
+  currentFurnitureIndex: 0
+  dropdownMenu: {fileID: 1922398763}
 --- !u!1 &1372703288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,9 +2312,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Sofa
-      m_Image: {fileID: 0}
     - m_Text: Chair
+      m_Image: {fileID: 0}
+    - m_Text: Sofa
       m_Image: {fileID: 0}
     - m_Text: Table
       m_Image: {fileID: 0}

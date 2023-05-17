@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +8,15 @@ public class ClickCreateObject : MonoBehaviour
 {
     public Camera mainCam;
 
-    [SerializeField] private GameObject sofaPrefab, chairPrefabs, tablePrefab;
+    [SerializeField] private List<GameObject> furniturePrefabs = new List<GameObject>();
+    [SerializeField] private int currentFurnitureIndex = 0;
+    [SerializeField] private TMP_Dropdown dropdownMenu;
 
     void Update()
     {
         Vector2 spot;
+
+        ChangeFurniture();
 
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0) == false)
@@ -34,10 +39,17 @@ public class ClickCreateObject : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hitInfo))
         {
             // Instantiate object 
-
-            Instantiate(sofaPrefab, hitInfo.point + new Vector3(0,0.3f,0), Quaternion.identity);
+            Instantiate(furniturePrefabs[currentFurnitureIndex], hitInfo.point + new Vector3(0,0.3f,0), Quaternion.identity);
 
             Debug.DrawLine(spot, hitInfo.point, Color.green, 1);
         }
     }
+
+
+    public void ChangeFurniture()
+    {
+        int fetchedIndex = dropdownMenu.value;
+        currentFurnitureIndex = fetchedIndex;
+    }
 }
+
