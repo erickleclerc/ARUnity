@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,6 +10,8 @@ public class ClickCreateObject : MonoBehaviour
     [SerializeField] private List<GameObject> furniturePrefabs = new List<GameObject>();
     [SerializeField] private int currentFurnitureIndex = 0;
     [SerializeField] private TMP_Dropdown dropdownMenu;
+    [SerializeField] private TMP_Dropdown gameStatesDropdown;
+    [SerializeField] private Toggle deleteToggle;
 
     void Update()
     {
@@ -36,10 +37,13 @@ public class ClickCreateObject : MonoBehaviour
 
         Ray ray = mainCam.ScreenPointToRay(spot);
 
-        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo) && deleteToggle.isOn == false && gameStatesDropdown.value == 0)
         {
-            // Instantiate object 
-            Instantiate(furniturePrefabs[currentFurnitureIndex], hitInfo.point + new Vector3(0,0.3f,0), Quaternion.identity);
+            //if he floor vs. wall
+           // if (hitInfo.collider.gameObject.transform.localRotation.z < 250);
+            //{
+                Instantiate(furniturePrefabs[currentFurnitureIndex], hitInfo.point + new Vector3(0, 0.3f, 0), Quaternion.identity);
+            //}
 
             Debug.DrawLine(spot, hitInfo.point, Color.green, 1);
         }
