@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,14 +9,11 @@ public class MoveFurniture : MonoBehaviour
     [SerializeField] private TMP_Dropdown gameStatesDropdown;
     [SerializeField] private Button rightButton;
     [SerializeField] private Button leftButton; 
-
     private GameObject selectedObject;
-
 
     void Update()
     {
         Vector2 spot;
-        
 
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0) == false)
@@ -58,7 +52,6 @@ public class MoveFurniture : MonoBehaviour
             //var itemRenderer = hitInfo.collider.gameObject.GetComponent<Renderer>();
             //itemRenderer.material.SetColor("_red", Color.red);
         }
-
     }
 
     public void MoveRight()

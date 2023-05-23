@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaneChecker : MonoBehaviour
@@ -32,9 +30,16 @@ public class PlaneChecker : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hitInfo))
         {
-
+            if (hitInfo.collider.gameObject.transform.eulerAngles.z > 1)
+            {
+                Debug.Log("Wall");
+            }
+            else
+            {
+                Debug.Log("Floor");
+            }
             Debug.DrawLine(spot, hitInfo.point, Color.green, 1);
-            Debug.Log(hitInfo.collider.gameObject.transform.eulerAngles);
+            //Debug.Log(hitInfo.collider.gameObject.transform.eulerAngles);
         }
     }
 }

@@ -96,7 +96,7 @@ namespace UnityEngine.XR.ARCore
 #if UNITY_ANDROID && !UNITY_EDITOR
             CreateSubsystem<XRSessionSubsystemDescriptor, XRSessionSubsystem>(s_SessionSubsystemDescriptors, "ARCore-Session");
             CreateSubsystem<XRCameraSubsystemDescriptor, XRCameraSubsystem>(s_CameraSubsystemDescriptors, "ARCore-Camera");
-            CreateSubsystem<XRPointCloudSubsystemDescriptor, XRPointCloudSubsystem>(s_DepthSubsystemDescriptors, "ARCore-Depth");
+            CreateSubsystem<XRDepthSubsystemDescriptor, XRDepthSubsystem>(s_DepthSubsystemDescriptors, "ARCore-Depth");
             CreateSubsystem<XRPlaneSubsystemDescriptor, XRPlaneSubsystem>(s_PlaneSubsystemDescriptors, "ARCore-Plane");
             CreateSubsystem<XRAnchorSubsystemDescriptor, XRAnchorSubsystem>(s_AnchorSubsystemDescriptors, "ARCore-Anchor");
             CreateSubsystem<XRRaycastSubsystemDescriptor, XRRaycastSubsystem>(s_RaycastSubsystemDescriptors, "ARCore-Raycast");
@@ -143,7 +143,7 @@ namespace UnityEngine.XR.ARCore
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
             DestroySubsystem<XRCameraSubsystem>();
-            DestroySubsystem<XRPointCloudSubsystem>();
+            DestroySubsystem<XRDepthSubsystem>();
             DestroySubsystem<XRPlaneSubsystem>();
             DestroySubsystem<XRAnchorSubsystem>();
             DestroySubsystem<XRRaycastSubsystem>();

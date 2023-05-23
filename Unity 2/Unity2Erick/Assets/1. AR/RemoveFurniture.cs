@@ -35,7 +35,6 @@ public class RemoveFurniture : MonoBehaviour
             {
                 Destroy(hitInfo.collider.gameObject);
             }
-
             //Debug.DrawLine(spot, hitInfo.point, Color.red, 1);
         }
     }
