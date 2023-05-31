@@ -393,6 +393,8 @@
 "Assets/1. AR/MoveFurniture.cs"
 "Assets/1. AR/PlaneChecker.cs"
 "Assets/1. AR/RemoveFurniture.cs"
+"Assets/2. Rhythm Game/FreezeScreen.cs"
+"Assets/2. Rhythm Game/RhythmGameLogic.cs"
 "Assets/ShaderGraphClass/DissolveOnCollision.cs"
 -langversion:9.0
 
