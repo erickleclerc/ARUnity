@@ -8,6 +8,11 @@ public class ClickCreateObject : MonoBehaviour
     public Camera mainCam;
 
     [SerializeField] private List<GameObject> furniturePrefabs = new List<GameObject>();
+
+    [SerializeField] private List<ScriptableObject> stocks = new List<ScriptableObject>();
+
+
+
     [SerializeField] private int currentFurnitureIndex = 0;
     [SerializeField] private TMP_Dropdown dropdownMenu;
     [SerializeField] private TMP_Dropdown gameStatesDropdown;

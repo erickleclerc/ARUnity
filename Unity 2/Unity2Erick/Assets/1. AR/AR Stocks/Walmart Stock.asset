@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef293c50e5a85454f9233fb35ca9fffb, type: 3}
+  m_Name: Walmart Stock
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: b3e9cb77b43183f429a83a4afcf5b021, type: 3}
+  graph: {fileID: 21300000, guid: fe3ac343879a2dc4d8e906930413cf8b, type: 3}
+  oldPrice: 6.2
+  currentPrice: 154.13
+  peRatio: 37.32
+  dividendYield: 1.47
+  eps: 4.13

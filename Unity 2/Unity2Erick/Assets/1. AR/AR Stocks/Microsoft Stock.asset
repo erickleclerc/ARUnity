@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef293c50e5a85454f9233fb35ca9fffb, type: 3}
+  m_Name: Microsoft Stock
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 57a42ac138d78c843a0aa75fabeabb6b, type: 3}
+  graph: {fileID: 21300000, guid: 0853538a6a7d5bf4f9a6d4202d7ae709, type: 3}
+  oldPrice: 0.64
+  currentPrice: 342.66
+  peRatio: 36.49
+  dividendYield: 0.81
+  eps: 9.39
